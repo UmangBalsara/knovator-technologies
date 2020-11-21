@@ -20,10 +20,11 @@ class Signup extends Component {
 
     onClick(e){
         e.preventDefault();
+        const {username,email,password}=this.state
         const data={
-            username:this.state.username,
-            email:this.state.email,
-            password:this.state.password,
+            username:username,
+            email:email,
+            password:password,
         }
 
         this.setState({
