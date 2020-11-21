@@ -30,11 +30,12 @@ class Posts extends Component {
 
     onClick(e){
         e.preventDefault();
+        const {title,body,category}=this.state;
         const data={
             postId:uuidv4(),
-            title:this.state.title,
-            body:this.state.body,
-            category:this.state.category,
+            title:title,
+            body:body,
+            category:category,
         }
 
         this.props.dispatch({
@@ -66,12 +67,13 @@ class Posts extends Component {
 
     onUpdate=(e)=>{
         e.preventDefault();
+        const {title,body,category}=this.state;
         this.props.dispatch({
             type:"UPDATE_POST",
             payload:{
-                title:this.state.title,
-                body:this.state.body,
-                category:this.state.category,
+                title:title,
+                body:body,
+                category:category,
             }
         })
 
